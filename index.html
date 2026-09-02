@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nithin Raj | Computer Science Developer & Creative</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Nithin Raj | Computer Science Developer & Creative" />
+    <meta name="description" content="Personal portfolio of Nithin Raj - B.E. Computer Science student at LICET. Aspiring Software Developer, Data Explorer, and Creative Technologist in Chennai, India." />
+    <meta name="keywords" content="Nithin Raj, LICET, Computer Science, Developer, Data Analytics, Python, Java, ClassConnect, Portfolio, Chennai" />
+    <meta name="author" content="Nithin Raj" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nithin Raj | Computer Science Developer & Creative" />
+    <meta property="og:description" content="Building with code, data and creativity. Explore projects, skills, and creative work of Nithin Raj." />
+    <meta property="og:image" content="/nithin-raj-photo.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN & React Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              bg: {
+                dark: "#080B11",
+                card: "rgba(15, 23, 42, 0.6)",
+                cardHover: "rgba(30, 41, 59, 0.7)",
+              },
+              accent: {
+                cyan: "#38bdf8",
+                sky: "#0ea5e9",
+                violet: "#a855f7",
+                purple: "#c084fc",
+                emerald: "#10b981",
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'Outfit', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            boxShadow: {
+              'glow-cyan': '0 0 25px -5px rgba(56, 189, 248, 0.35)',
+              'glow-violet': '0 0 25px -5px rgba(168, 85, 247, 0.35)',
+              'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- React 18 & Babel Standalone -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Lucide Icons UMD -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
+      }
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.55);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+      }
+      .glass-panel-hover {
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .glass-panel-hover:hover {
+        background: rgba(30, 41, 59, 0.65);
+        border-color: rgba(56, 189, 248, 0.35);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px -10px rgba(56, 189, 248, 0.25);
+      }
+      .glow-button-primary {
+        background: linear-gradient(135deg, #0284c7 0%, #7e22ce 100%);
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+        transition: all 0.3s ease;
+      }
+      .glow-button-primary:hover {
+        box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+        transform: translateY(-2px) scale(1.02);
+      }
+      .glow-button-secondary {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        transition: all 0.3s ease;
+      }
+      .glow-button-secondary:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(56, 189, 248, 0.5);
+        transform: translateY(-2px);
+      }
+      .levitate-frame {
+        animation: levitate 6s ease-in-out infinite;
+      }
+      @keyframes levitate {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-14px) rotate(1deg); }
+      }
+      .bg-mesh {
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
+          radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+      }
+      .bg-grid-pattern {
+        background-size: 40px 40px;
+        background-image: 
+          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #080B11; }
+      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+    </style>
+  </head>
+  <body class="bg-[#080B11] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black overflow-x-hidden">
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      // Icon Component Wrapper using Lucide DOM icons
+      const Icon = ({ name, className = "w-5 h-5" }) => {
+        return <i data-lucide={name} className={className}></i>;
+      };
+
+      // App Component
+      const App = () => {
+        const [activeSection, setActiveSection] = useState('hero');
+        const [scrolled, setScrolled] = useState(false);
+        const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+        const [activeSkillTab, setActiveSkillTab] = useState('All');
+        const [activeCreative, setActiveCreative] = useState('photography');
+        const [copiedEmail, setCopiedEmail] = useState(false);
+        const [copiedPhone, setCopiedPhone] = useState(false);
+        const [formSubmitted, setFormSubmitted] = useState(false);
+
+        useEffect(() => {
+          if (window.lucide) {
+            window.lucide.createIcons();
+          }
+        });
+
+        useEffect(() => {
+          const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+            const sections = ['hero', 'about', 'skills', 'projects', 'beyond-code', 'education', 'experience', 'contact'];
+            const scrollPos = window.scrollY + 200;
+            for (const section of sections) {
+              const el = document.getElementById(section);
+              if (el) {
+                const top = el.offsetTop;
+                const height = el.offsetHeight;
+                if (scrollPos >= top && scrollPos < top + height) {
+                  setActiveSection(section);
+                  break;
+                }
+              }
+            }
+          };
+          window.addEventListener('scroll', handleScroll);
+          return () => window.removeEventListener('scroll', handleScroll);
+        }, []);
+
+        const copyText = (text, type) => {
+          navigator.clipboard.writeText(text);
+          if (type === 'email') {
+            setCopiedEmail(true);
+            setTimeout(() => setCopiedEmail(false), 2000);
+          } else {
+            setCopiedPhone(true);
+            setTimeout(() => setCopiedPhone(false), 2000);
+          }
+        };
+
+        const handleContactSubmit = (e) => {
+          e.preventDefault();
+          setFormSubmitted(true);
+          setTimeout(() => setFormSubmitted(false), 4000);
+        };
+
+        const navLinks = [
+          { name: 'About', href: '#about' },
+          { name: 'Skills', href: '#skills' },
+          { name: 'Projects', href: '#projects' },
+          { name: 'Beyond Code', href: '#beyond-code' },
+          { name: 'Education', href: '#education' },
+          { name: 'Experience', href: '#experience' },
+          { name: 'Contact', href: '#contact' },
+        ];
+
+        const skillsData = [
+          { name: 'Python', category: 'Programming', icon: 'terminal', tagline: 'Core Scripting & Data Logic', level: 'Intermediate' },
+          { name: 'C Language', category: 'Programming', icon: 'code-2', tagline: 'Data Structures & Fundamentals', level: 'Foundational' },
+          { name: 'Java', category: 'Programming', icon: 'code', tagline: 'OOP & Swing GUI Applications', level: 'Intermediate' },
+
+          { name: 'Data Analysis', category: 'Data', icon: 'database', tagline: 'Analytical Exploration & Patterns', level: 'Applied' },
+          { name: 'Social Media Analytics & Insights', category: 'Data', icon: 'bar-chart-3', tagline: 'Audience Metrics & Growth Trends', level: 'Applied' },
+
+          { name: 'Video Editing', category: 'Creative', icon: 'film', tagline: 'Cinematic Cuts & Motion Visuals', level: 'Practiced' },
+          { name: 'Poster Design', category: 'Creative', icon: 'sparkles', tagline: 'Visual Brand Identity & Layouts', level: 'Practiced' },
+          { name: 'Photography', category: 'Creative', icon: 'camera', tagline: 'Framing, Color & Visual Storytelling', level: 'Practiced' },
+          { name: 'Script Writing', category: 'Creative', icon: 'file-text', tagline: 'Narrative Conception & Messaging', level: 'Practiced' },
+          { name: 'Social Media Promotion', category: 'Creative', icon: 'share-2', tagline: 'Digital Strategy & Campaign Reach', level: 'Practiced' },
+
+          { name: 'Team Collaboration', category: 'Professional', icon: 'users', tagline: 'Cross-functional Synergy & Communication', level: 'Core Competency' },
+          { name: 'Project Management', category: 'Professional', icon: 'compass', tagline: 'Planning, Execution & Milestones', level: 'Core Competency' },
+          { name: 'Problem Solving', category: 'Professional', icon: 'brain', tagline: 'Logical Decomposition & Debugging', level: 'Core Competency' },
+          { name: 'Analytical Thinking', category: 'Professional', icon: 'bar-chart-2', tagline: 'Data-driven Decision Making', level: 'Core Competency' },
+          { name: 'Adaptability', category: 'Professional', icon: 'refresh-cw', tagline: 'Fast Learning in Dynamic Contexts', level: 'Core Competency' },
+        ];
+
+        const skillCategories = ['All', 'Programming', 'Data', 'Creative', 'Professional'];
+        const filteredSkills = activeSkillTab === 'All' ? skillsData : skillsData.filter(s => s.category === activeSkillTab);
+
+        const creativeItems = [
+          {
+            id: 'photography',
+            title: 'Photography',
+            category: 'Visual Storytelling',
+            icon: 'camera',
+            description: 'Capturing moments, light, and natural perspectives with a keen eye for framing and visual depth.',
+            gradient: 'from-cyan-500/20 via-sky-500/10 to-transparent',
+            details: ['Natural Lighting & Framing', 'Color Grading & Contrast', 'Landscape & Beach Perspective']
+          },
+          {
+            id: 'video-editing',
+            title: 'Video Editing',
+            category: 'Post-Production',
+            icon: 'film',
+            description: 'Crafting cinematic pacing, smooth transitions, and engaging short-form or long-form video content.',
+            gradient: 'from-purple-500/20 via-violet-500/10 to-transparent',
+            details: ['Timeline Pacing & Cuts', 'Audio Sync & Sound FX', 'Dynamic Visual Effects']
+          },
+          {
+            id: 'poster-design',
+            title: 'Poster Design',
+            category: 'Graphic Design',
+            icon: 'image',
+            description: 'Designing eye-catching posters and graphic layouts for events, campaigns, and digital platforms.',
+            gradient: 'from-pink-500/20 via-rose-500/10 to-transparent',
+            details: ['Typography Hierarchy', 'Brand Color Palettes', 'Event & Digital Assets']
+          },
+          {
+            id: 'script-writing',
+            title: 'Script Writing',
+            category: 'Creative Concept',
+            icon: 'file-text',
+            description: 'Structuring clear narratives, creative hooks, and video flow scripts that hold audience attention.',
+            gradient: 'from-amber-500/20 via-yellow-500/10 to-transparent',
+            details: ['Narrative Framing', 'Audience Engagement Hooks', 'Structured Video Outlines']
+          },
+          {
+            id: 'social-media',
+            title: 'Social Media Promotion',
+            category: 'Digital Reach',
+            icon: 'megaphone',
+            description: 'Strategizing promotional campaigns, content scheduling, and digital outreach to drive engagement.',
+            gradient: 'from-emerald-500/20 via-teal-500/10 to-transparent',
+            details: ['Campaign Planning', 'Audience Insights Analysis', 'Cross-Platform Promotion']
+          }
+        ];
+
+        const currentCreative = creativeItems.find(c => c.id === activeCreative) || creativeItems[0];
+
+        return (
+          <div className="min-h-screen bg-[#080B11] text-slate-100 relative bg-mesh">
+            
+            {/* Header / Navbar */}
+            <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-3 bg-[#080B11]/80 backdrop-blur-md border-b border-slate-800/60 shadow-lg shadow-black/40' : 'py-5 bg-transparent'}`}>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+                <a href="#" className="group flex items-center gap-3 text-slate-100 font-bold text-xl tracking-tight">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-violet-600 p-[1px] shadow-glow-cyan">
+                    <div className="w-full h-full bg-[#0B0F19] rounded-[11px] flex items-center justify-center font-extrabold text-cyan-400">
+                      NR
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-extrabold text-white text-lg tracking-wide">
+                      NITHIN <span className="text-cyan-400">RAJ</span>
+                    </span>
+                    <span className="text-[10px] text-slate-400 tracking-wider font-mono -mt-1">
+                      CS DEVELOPER
+                    </span>
+                  </div>
+                </a>
+
+                <nav className="hidden lg:flex items-center gap-1 glass-panel px-4 py-1.5 rounded-full border border-slate-800/80">
+                  {navLinks.map((link) => {
+                    const isActive = activeSection === link.href.substring(1);
+                    return (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        className={`px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all relative ${
+                          isActive
+                            ? 'text-cyan-300 font-semibold bg-cyan-500/10 border border-cyan-500/30'
+                            : 'text-slate-300 hover:text-white hover:bg-slate-800/40'
+                        }`}
+                      >
+                        {link.name}
+                      </a>
+                    );
+                  })}
+                </nav>
+
+                <div className="hidden sm:flex items-center gap-3">
+                  <a
+                    href="/Nithin_Raj_Resume.pdf"
+                    download="Nithin_Raj_Resume.pdf"
+                    className="glow-button-secondary text-xs font-semibold px-4 py-2 rounded-xl text-slate-200 flex items-center gap-2"
+                  >
+                    <Icon name="download" className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>Resume</span>
+                  </a>
+                  <a
+                    href="#contact"
+                    className="glow-button-primary text-xs font-semibold px-4 py-2 rounded-xl text-white flex items-center gap-2"
+                  >
+                    <Icon name="send" className="w-3.5 h-3.5" />
+                    <span>Let's Talk</span>
+                  </a>
+                </div>
+
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="lg:hidden p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300"
+                >
+                  <Icon name={mobileMenuOpen ? "x" : "menu"} className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Mobile Drawer */}
+              {mobileMenuOpen && (
+                <div className="lg:hidden fixed inset-x-4 top-20 z-50 glass-panel p-6 rounded-2xl border border-slate-800 shadow-2xl">
+                  <div className="flex flex-col gap-3">
+                    {navLinks.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`px-4 py-2.5 rounded-xl text-sm font-medium ${
+                          activeSection === link.href.substring(1)
+                            ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/20'
+                            : 'text-slate-300'
+                        }`}
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                    <div className="pt-4 border-t border-slate-800 flex flex-col gap-2">
+                      <a
+                        href="/Nithin_Raj_Resume.pdf"
+                        download="Nithin_Raj_Resume.pdf"
+                        className="glow-button-secondary w-full text-center py-2.5 rounded-xl text-xs font-semibold text-slate-200 flex items-center justify-center gap-2"
+                      >
+                        <Icon name="download" className="w-4 h-4 text-cyan-400" />
+                        <span>Download Resume</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </header>
+
+            {/* HERO SECTION */}
+            <section id="hero" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
+              <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/15 via-violet-600/15 to-purple-600/10 rounded-full blur-[130px] pointer-events-none" />
+              
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                  
+                  {/* Left Hero */}
+                  <div className="lg:col-span-7 flex flex-col items-start space-y-6 text-left">
+                    
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-cyan-300 text-xs font-semibold tracking-wide shadow-glow-cyan">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                      </span>
+                      <span>Available for Internships & Projects</span>
+                      <span className="text-slate-600">•</span>
+                      <span className="flex items-center gap-1 text-slate-400">
+                        <Icon name="map-pin" className="w-3 h-3 text-cyan-400" /> Chennai, India
+                      </span>
+                    </div>
+
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-cyan-400 tracking-wider uppercase font-semibold flex items-center gap-2">
+                        <Icon name="terminal" className="w-4 h-4 text-cyan-400" />
+                        <span>Computer Science Student</span>
+                      </div>
+                      <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-none">
+                        NITHIN <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-400">RAJ</span>
+                      </h1>
+                      <p className="text-xl sm:text-2xl font-semibold text-slate-300 tracking-tight flex items-center gap-2 pt-1">
+                        Developer <span className="text-cyan-500">•</span> Data Explorer <span className="text-violet-500">•</span> Creative
+                      </p>
+                    </div>
+
+                    <p className="text-slate-300 text-lg sm:text-xl font-medium max-w-2xl leading-relaxed">
+                      "Building with code, data and creativity."
+                    </p>
+                    
+                    <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl">
+                      Sophomore pursuing B.E. Computer Science and Engineering at Loyola-ICAM College of Engineering & Technology (LICET). Crafting clean software solutions and exploring data insights.
+                    </p>
+
+                    <div className="flex flex-wrap items-center gap-4 pt-4 w-full sm:w-auto">
+                      <a
+                        href="#projects"
+                        className="glow-button-primary px-6 py-3.5 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 group w-full sm:w-auto"
+                      >
+                        <span>View Projects</span>
+                        <Icon name="arrow-right" className="w-4 h-4" />
+                      </a>
+
+                      <a
+                        href="/Nithin_Raj_Resume.pdf"
+                        download="Nithin_Raj_Resume.pdf"
+                        className="glow-button-secondary px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-200 flex items-center justify-center gap-2 border border-slate-700/80 hover:border-cyan-500/50 w-full sm:w-auto"
+                      >
+                        <Icon name="download" className="w-4 h-4 text-cyan-400" />
+                        <span>Download Resume</span>
+                      </a>
+
+                      <a
+                        href="#contact"
+                        className="glow-button-secondary px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-200 flex items-center justify-center gap-2 border border-slate-700/80 hover:border-violet-500/50 w-full sm:w-auto"
+                      >
+                        <Icon name="mail" className="w-4 h-4 text-violet-400" />
+                        <span>Contact Me</span>
+                      </a>
+                    </div>
+
+                    <div className="pt-6 border-t border-slate-800/80 w-full flex items-center gap-6 text-xs text-slate-400 font-mono">
+                      <div className="flex items-center gap-1.5 text-slate-300">
+                        <Icon name="code" className="w-4 h-4 text-cyan-400" /> Python / C / Java
+                      </div>
+                      <div className="flex items-center gap-1.5 text-slate-300">
+                        <Icon name="database" className="w-4 h-4 text-violet-400" /> Data Analytics
+                      </div>
+                      <div className="flex items-center gap-1.5 text-slate-300">
+                        <Icon name="palette" className="w-4 h-4 text-emerald-400" /> Creative Visuals
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Right Levitating Photo Card */}
+                  <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div className="relative group w-full max-w-md">
+                      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700" />
+                      
+                      <div className="relative levitate-frame glass-panel p-4 sm:p-6 rounded-3xl border border-white/10 shadow-2xl flex flex-col items-center">
+                        
+                        {/* Profile Image Holder with Cyber Glow Frame */}
+                        <div className="relative w-full aspect-[4/4.5] rounded-2xl overflow-hidden border-2 border-cyan-500/40 bg-slate-900 shadow-glow-cyan">
+                          <img
+                            src="/nithin-raj-photo.jpg"
+                            alt="Nithin Raj Profile Photo"
+                            onError={(e) => { e.target.onerror = null; e.target.src = '/nithin-raj-photo.png'; }}
+                            className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent opacity-60" />
+                          
+                          <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-[#0B0F19]/85 backdrop-blur-md border border-cyan-500/30 flex items-center justify-between shadow-lg">
+                            <div className="flex items-center gap-2.5">
+                              <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#10b981] animate-pulse" />
+                              <div>
+                                <h3 className="text-sm font-bold text-white tracking-wide">Nithin Raj</h3>
+                                <p className="text-[11px] text-cyan-400 font-mono">CS Student • LICET</p>
+                              </div>
+                            </div>
+                            <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                              2nd Year
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="w-full grid grid-cols-2 gap-3 mt-4">
+                          <div className="glass-panel px-3 py-2 rounded-xl text-center border border-cyan-500/20">
+                            <span className="text-[10px] text-slate-400 uppercase font-mono block">Specialization</span>
+                            <span className="text-xs font-semibold text-cyan-300">Software & Data</span>
+                          </div>
+                          <div className="glass-panel px-3 py-2 rounded-xl text-center border border-violet-500/20">
+                            <span className="text-[10px] text-slate-400 uppercase font-mono block">Creative Edge</span>
+                            <span className="text-xs font-semibold text-violet-300">Visuals & Media</span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            {/* ABOUT SECTION */}
+            <section id="about" className="py-24 relative overflow-hidden">
+              <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
+
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
+                    <Icon name="user-check" className="w-3.5 h-3.5" />
+                    <span>About Me</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    Driven by curiosity, powered by <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">code & data</span>.
+                  </h2>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                  <div className="lg:col-span-5 glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+                    <div className="space-y-4">
+                      <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold">
+                        <Icon name="graduation-cap" className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white">Computer Science Sophomore</h3>
+                      <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+                        I am a results-driven Computer Science sophomore at <strong className="text-white font-semibold">Loyola-ICAM College of Engineering and Technology (LICET)</strong> in Chennai, India.
+                      </p>
+                      <p className="text-slate-400 leading-relaxed text-sm">
+                        With a solid foundation in programming, data structures, and algorithmic thinking, I thrive on translating theoretical concepts into practical software applications and data-driven solutions.
+                      </p>
+                    </div>
+
+                    <div className="pt-4 border-t border-slate-800">
+                      <div className="glass-panel p-4 rounded-2xl border border-sky-500/30 bg-gradient-to-r from-cyan-950/40 to-slate-900/60 flex items-center gap-3">
+                        <div className="p-2.5 rounded-xl bg-sky-500/20 text-sky-400 border border-sky-500/40">
+                          <Icon name="award" className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <span className="text-xs font-bold text-white uppercase tracking-wider block font-mono">Verified Resume Distinction</span>
+                          <span className="text-xs text-sky-300 font-medium">NCC Navy 'A' Certificate Holder</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="glass-panel p-6 rounded-2xl border border-slate-800 glass-panel-hover flex flex-col space-y-3">
+                      <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 w-fit text-cyan-400">
+                        <Icon name="cpu" className="w-5 h-5" />
+                      </div>
+                      <h4 className="text-lg font-bold text-white">Software Development</h4>
+                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Building reliable applications using modern programming principles, OOP patterns, and robust code structures.
+                      </p>
+                    </div>
+
+                    <div className="glass-panel p-6 rounded-2xl border border-slate-800 glass-panel-hover flex flex-col space-y-3">
+                      <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 w-fit text-violet-400">
+                        <Icon name="bar-chart-2" className="w-5 h-5" />
+                      </div>
+                      <h4 className="text-lg font-bold text-white">Data Analytics</h4>
+                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Extracting actionable insights from data structures and social media metrics to solve real-world problems.
+                      </p>
+                    </div>
+
+                    <div className="glass-panel p-6 rounded-2xl border border-slate-800 glass-panel-hover flex flex-col space-y-3">
+                      <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 w-fit text-sky-400">
+                        <Icon name="sparkles" className="w-5 h-5" />
+                      </div>
+                      <h4 className="text-lg font-bold text-white">Emerging Technologies</h4>
+                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Quickly learning and applying next-gen tech tools, frameworks, and digital paradigms to practical challenges.
+                      </p>
+                    </div>
+
+                    <div className="glass-panel p-6 rounded-2xl border border-slate-800 glass-panel-hover flex flex-col space-y-3">
+                      <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 w-fit text-emerald-400">
+                        <Icon name="wrench" className="w-5 h-5" />
+                      </div>
+                      <h4 className="text-lg font-bold text-white">Practical Problem Solving</h4>
+                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Applying analytical thinking, teamwork, and adaptable mindsets in dynamic tech environments.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            {/* SKILLS SECTION */}
+            <section id="skills" className="py-24 relative overflow-hidden bg-slate-950/40">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
+                    <Icon name="sparkles" className="w-3.5 h-3.5" />
+                    <span>Capabilities & Toolkit</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-400">Expertise</span>
+                  </h2>
+                </div>
+
+                {/* Filter Tabs */}
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+                  {skillCategories.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setActiveSkillTab(cat)}
+                      className={`px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all ${
+                        activeSkillTab === cat
+                          ? 'bg-gradient-to-r from-cyan-500 to-violet-600 text-white shadow-glow-cyan scale-105'
+                          : 'glass-panel text-slate-300 hover:text-white hover:bg-slate-800/60 border border-slate-800'
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filteredSkills.map((skill, idx) => (
+                    <div
+                      key={idx}
+                      className="glass-panel p-6 rounded-2xl border border-slate-800 glass-panel-hover flex flex-col justify-between group"
+                    >
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-cyan-400">
+                          <Icon name={skill.icon} className="w-5 h-5" />
+                        </div>
+                        <span className="text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-cyan-300 border border-slate-700">
+                          {skill.category}
+                        </span>
+                      </div>
+
+                      <div>
+                        <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                          {skill.name}
+                        </h3>
+                        <p className="text-slate-400 text-xs mt-1 leading-relaxed">
+                          {skill.tagline}
+                        </p>
+                      </div>
+
+                      <div className="mt-5 pt-4 border-t border-slate-800/60 flex items-center justify-between">
+                        <span className="text-[11px] text-slate-500 font-mono">Proficiency</span>
+                        <span className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                          <Icon name="check-circle-2" className="w-3.5 h-3.5 text-cyan-400" />
+                          {skill.level}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </section>
+
+            {/* PROJECTS SECTION */}
+            <section id="projects" className="py-24 relative overflow-hidden">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
+                    <Icon name="folder-git-2" className="w-3.5 h-3.5" />
+                    <span>Project Showcase</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    Software & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">Data Initiatives</span>
+                  </h2>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  
+                  {/* Project 1: ClassConnect */}
+                  <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between glass-panel-hover group relative overflow-hidden">
+                    <div>
+                      <div className="flex items-center justify-between mb-6">
+                        <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                          LICET | 2024
+                        </span>
+                        <span className="text-xs text-slate-400 font-mono flex items-center gap-1">
+                          <Icon name="code-2" className="w-3.5 h-3.5 text-cyan-400" /> Java Desktop App
+                        </span>
+                      </div>
+
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-cyan-300 transition-colors">
+                        ClassConnect
+                      </h3>
+                      <p className="text-slate-300 text-sm sm:text-base mt-2 leading-relaxed">
+                        A Java application designed to connect students and teachers seamlessly using Object-Oriented Programming (OOP) and Swing GUI architecture.
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 my-6">
+                        {['Java', 'OOP', 'Swing', 'GUI Architecture'].map((tech) => (
+                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 border border-slate-700">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="space-y-3 pt-4 border-t border-slate-800">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">
+                          Skills Developed:
+                        </h4>
+                        <div className="grid grid-cols-3 gap-2">
+                          <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                            <Icon name="code" className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
+                            <span className="text-xs font-semibold text-white block">Coding</span>
+                          </div>
+                          <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                            <Icon name="bug" className="w-4 h-4 text-sky-400 mx-auto mb-1" />
+                            <span className="text-xs font-semibold text-white block">Debugging</span>
+                          </div>
+                          <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                            <Icon name="users" className="w-4 h-4 text-violet-400 mx-auto mb-1" />
+                            <span className="text-xs font-semibold text-white block">Teamwork</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                      <span>Role: Student Developer</span>
+                      <span className="text-cyan-400 flex items-center gap-1 font-semibold">
+                        Verified Project <Icon name="check-circle-2" className="w-4 h-4" />
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Project 2: Social Media Analytics & Insights */}
+                  <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between glass-panel-hover group relative overflow-hidden">
+                    <div>
+                      <div className="flex items-center justify-between mb-6">
+                        <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-violet-500/10 text-violet-400 border border-violet-500/30">
+                          Data & Insights Track
+                        </span>
+                        <span className="text-xs text-slate-400 font-mono flex items-center gap-1">
+                          <Icon name="bar-chart-3" className="w-3.5 h-3.5 text-violet-400" /> Analytics Initiative
+                        </span>
+                      </div>
+
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-violet-300 transition-colors">
+                        Social Media Analytics & Insights
+                      </h3>
+                      <p className="text-slate-300 text-sm sm:text-base mt-2 leading-relaxed">
+                        Data exploration and engagement insights focused on measuring audience reach, digital metrics, and social media growth trends.
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 my-6">
+                        {['Data Analysis', 'Social Media Analytics', 'Audience Insights'].map((tech) => (
+                          <span key={tech} className="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 border border-slate-700">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="p-4 rounded-2xl bg-violet-950/30 border border-dashed border-violet-500/40 text-slate-300 text-xs space-y-2">
+                        <div className="flex items-center gap-2 text-violet-300 font-bold font-mono">
+                          <Icon name="edit-3" className="w-4 h-4" />
+                          <span>Customizable Showcase Slot</span>
+                        </div>
+                        <p className="text-slate-400 leading-relaxed">
+                          Sourced strictly from resume skills. Case studies, repository links, or specific campaign stats can be updated here in the future.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                      <span>Focus: Data Explorer</span>
+                      <span className="text-violet-400 flex items-center gap-1 font-semibold">
+                        Resume Sourced <Icon name="check-circle-2" className="w-4 h-4" />
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            {/* BEYOND CODE SECTION */}
+            <section id="beyond-code" className="py-24 relative overflow-hidden bg-gradient-to-b from-[#080B11] via-slate-950 to-[#080B11]">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel border border-purple-500/30 text-purple-400 text-xs font-mono font-semibold tracking-wider uppercase">
+                    <Icon name="sparkles" className="w-3.5 h-3.5" />
+                    <span>Creative Pursuits</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    Beyond <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400">Code</span>
+                  </h2>
+                  <p className="text-slate-400 text-base sm:text-lg">
+                    Photography, Video Editing, Poster Design, Script Writing, and Social Media Promotion.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                  
+                  <div className="lg:col-span-5 flex flex-col gap-3">
+                    {creativeItems.map((item) => {
+                      const isSelected = activeCreative === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => setActiveCreative(item.id)}
+                          className={`p-4 rounded-2xl text-left transition-all duration-300 flex items-center justify-between border ${
+                            isSelected
+                              ? 'glass-panel border-cyan-500/40 bg-slate-900 shadow-lg scale-[1.02]'
+                              : 'glass-panel border-slate-800 text-slate-400 hover:text-white'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-cyan-400">
+                              <Icon name={item.icon} className="w-5 h-5" />
+                            </div>
+                            <div>
+                              <h4 className="text-base font-bold text-white">{item.title}</h4>
+                              <span className="text-[11px] font-mono text-slate-400">{item.category}</span>
+                            </div>
+                          </div>
+                          <Icon name="eye" className={`w-4 h-4 ${isSelected ? 'text-cyan-400' : 'opacity-0'}`} />
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  <div className="lg:col-span-7">
+                    <div className={`h-full glass-panel p-8 sm:p-10 rounded-3xl border border-slate-800 flex flex-col justify-between bg-gradient-to-br ${currentCreative.gradient}`}>
+                      <div className="space-y-6">
+                        <div className="flex items-center justify-between">
+                          <div className="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-cyan-400">
+                            <Icon name={currentCreative.icon} className="w-6 h-6" />
+                          </div>
+                          <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-950 text-slate-300 border border-slate-800">
+                            {currentCreative.category}
+                          </span>
+                        </div>
+
+                        <div className="space-y-2">
+                          <h3 className="text-3xl sm:text-4xl font-extrabold text-white">
+                            {currentCreative.title}
+                          </h3>
+                          <p className="text-slate-300 text-base leading-relaxed">
+                            {currentCreative.description}
+                          </p>
+                        </div>
+
+                        <div className="pt-6 border-t border-slate-800 space-y-3">
+                          <h4 className="text-xs font-bold font-mono text-slate-400 uppercase tracking-wider">
+                            Key Focus & Application:
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {currentCreative.details.map((d, idx) => (
+                              <span key={idx} className="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-950 text-slate-200 border border-slate-800 flex items-center gap-1.5">
+                                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                                {d}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-8 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-mono text-slate-400">
+                        <span>Extra-Curricular Pursuits</span>
+                        <span className="text-slate-300">Creative Media</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            {/* EDUCATION SECTION */}
+            <section id="education" className="py-24 relative overflow-hidden bg-slate-950/40">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
+                    <Icon name="graduation-cap" className="w-3.5 h-3.5" />
+                    <span>Education Timeline</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">Journey</span>
+                  </h2>
+                </div>
+
+                <div className="max-w-4xl mx-auto space-y-8">
+                  
+                  <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover">
+                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3.5 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+                          <Icon name="building-2" className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-bold text-white">
+                            Loyola-ICAM College of Engineering and Technology (LICET)
+                          </h3>
+                          <p className="text-cyan-400 font-semibold text-sm sm:text-base">
+                            B.E. Computer Science and Engineering
+                          </p>
+                        </div>
+                      </div>
+
+                      <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-bold text-xs font-mono w-fit">
+                        Currently Pursuing 2nd Year
+                      </span>
+                    </div>
+
+                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-4">
+                      Focused on software development, data analytics, programming paradigms, and practical engineering problem solving.
+                    </p>
+                  </div>
+
+                  <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover">
+                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3.5 rounded-2xl bg-violet-500/10 border border-violet-500/30 text-violet-400">
+                          <Icon name="book-open" className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-bold text-white">
+                            Madras Christian College school, Chennai
+                          </h3>
+                          <p className="text-violet-400 font-semibold text-sm sm:text-base">
+                            Higher Secondary Education (HSC)
+                          </p>
+                        </div>
+                      </div>
+
+                      <span className="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-xs font-mono w-fit">
+                        Completed
+                      </span>
+                    </div>
+
+                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-4">
+                      Completed coursework in Computer Science, Mathematics, and Physics with strong academic performance.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            {/* EXPERIENCE SECTION */}
+            <section id="experience" className="py-24 relative overflow-hidden">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
+                    <Icon name="briefcase" className="w-3.5 h-3.5" />
+                    <span>Roles & Initiatives</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    Experience & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">Activities</span>
+                  </h2>
+                </div>
+
+                <div className="max-w-4xl mx-auto space-y-8">
+                  
+                  <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                      <div>
+                        <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                          Current Focus
+                        </span>
+                        <h3 className="text-2xl font-bold text-white mt-2">
+                          Aspiring IT Intern
+                        </h3>
+                      </div>
+                      <span className="text-xs font-mono text-slate-400 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800 w-fit">
+                        2025 – Present
+                      </span>
+                    </div>
+
+                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                      Motivated to learn, create, and grow through real-world tech, data analytics, and marketing projects. Open for software development internships and collaborative projects.
+                    </p>
+                  </div>
+
+                  <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                      <div>
+                        <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
+                          LICET Academic Project
+                        </span>
+                        <h3 className="text-2xl font-bold text-white mt-2">
+                          Student Developer – ClassConnect (Java Project)
+                        </h3>
+                      </div>
+                      <span className="text-xs font-mono text-slate-400 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800 w-fit">
+                        LICET | 2024
+                      </span>
+                    </div>
+
+                    <ul className="space-y-2 text-slate-300 text-sm sm:text-base leading-relaxed">
+                      <li className="flex items-start gap-2">
+                        <Icon name="check-circle-2" className="w-4 h-4 text-cyan-400 shrink-0 mt-1" />
+                        <span>Built a Java app to connect students and teachers using OOP and Swing.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="check-circle-2" className="w-4 h-4 text-cyan-400 shrink-0 mt-1" />
+                        <span>Improved skills in coding, debugging, and teamwork.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            {/* CONTACT SECTION */}
+            <section id="contact" className="py-24 relative overflow-hidden bg-slate-950/60">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold tracking-wider uppercase">
+                    <Icon name="sparkles" className="w-3.5 h-3.5" />
+                    <span>Let's Connect</span>
+                  </div>
+                  <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+                    "Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-400">meaningful."</span>
+                  </h2>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
+                  
+                  <div className="lg:col-span-5 space-y-4">
+                    
+                    <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-center justify-between glass-panel-hover">
+                      <div className="flex items-center gap-4">
+                        <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+                          <Icon name="mail" className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Email</span>
+                          <a href="mailto:nithinraj.28csb@licet.ac.in" className="text-sm sm:text-base font-semibold text-white hover:text-cyan-300">
+                            nithinraj.28csb@licet.ac.in
+                          </a>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => copyText('nithinraj.28csb@licet.ac.in', 'email')}
+                        className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"
+                        title="Copy Email"
+                      >
+                        <Icon name={copiedEmail ? "check" : "copy"} className={`w-4 h-4 ${copiedEmail ? 'text-emerald-400' : ''}`} />
+                      </button>
+                    </div>
+
+                    <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-center justify-between glass-panel-hover">
+                      <div className="flex items-center gap-4">
+                        <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/30 text-violet-400">
+                          <Icon name="phone" className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Phone</span>
+                          <a href="tel:7358024553" className="text-sm sm:text-base font-semibold text-white hover:text-violet-300">
+                            +91 7358024553
+                          </a>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => copyText('7358024553', 'phone')}
+                        className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"
+                        title="Copy Phone"
+                      >
+                        <Icon name={copiedPhone ? "check" : "copy"} className={`w-4 h-4 ${copiedPhone ? 'text-emerald-400' : ''}`} />
+                      </button>
+                    </div>
+
+                    <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-center justify-between glass-panel-hover">
+                      <div className="flex items-center gap-4">
+                        <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                          <Icon name="map-pin" className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Location</span>
+                          <span className="text-sm sm:text-base font-semibold text-white">
+                            Chennai, India
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a
+                      href="/Nithin_Raj_Resume.pdf"
+                      download="Nithin_Raj_Resume.pdf"
+                      className="glow-button-secondary w-full p-4 rounded-2xl text-sm font-semibold text-slate-200 flex items-center justify-center gap-2 border border-slate-700 hover:border-cyan-500/50"
+                    >
+                      <Icon name="download" className="w-4 h-4 text-cyan-400" />
+                      <span>Download Resume PDF</span>
+                    </a>
+
+                  </div>
+
+                  <div className="lg:col-span-7 glass-panel p-8 rounded-3xl border border-slate-800">
+                    {formSubmitted ? (
+                      <div className="py-12 text-center space-y-4">
+                        <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto">
+                          <Icon name="check" className="w-6 h-6" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white">Message Sent!</h3>
+                        <p className="text-slate-300 text-sm">
+                          Thank you for reaching out. Nithin will get back to you shortly.
+                        </p>
+                      </div>
+                    ) : (
+                      <form onSubmit={handleContactSubmit} className="space-y-4">
+                        <h3 className="text-xl font-bold text-white mb-2">Send a Message</h3>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-xs font-mono text-slate-400 block mb-1">Name</label>
+                            <input
+                              type="text"
+                              required
+                              placeholder="Recruiter / Collaborator"
+                              className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-cyan-500"
+                            />
+                          </div>
+                          <div>
+                            <label className="text-xs font-mono text-slate-400 block mb-1">Email</label>
+                            <input
+                              type="email"
+                              required
+                              placeholder="name@company.com"
+                              className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-cyan-500"
+                            />
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="text-xs font-mono text-slate-400 block mb-1">Subject</label>
+                          <input
+                            type="text"
+                            required
+                            placeholder="Internship Inquiry / Project Discussion"
+                            className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-cyan-500"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="text-xs font-mono text-slate-400 block mb-1">Message</label>
+                          <textarea
+                            rows={4}
+                            required
+                            placeholder="Hi Nithin..."
+                            className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-cyan-500 resize-none"
+                          />
+                        </div>
+
+                        <button
+                          type="submit"
+                          className="glow-button-primary w-full py-3.5 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2"
+                        >
+                          <Icon name="send" className="w-4 h-4" />
+                          <span>Send Direct Message</span>
+                        </button>
+                      </form>
+                    )}
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            {/* FOOTER */}
+            <footer className="py-12 relative overflow-hidden border-t border-slate-800/80 bg-[#080B11]">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-violet-600 p-[1px]">
+                      <div className="w-full h-full bg-[#0B0F19] rounded-[7px] flex items-center justify-center font-extrabold text-cyan-400 text-xs">
+                        NR
+                      </div>
+                    </div>
+                    <div>
+                      <span className="font-extrabold text-white text-sm">
+                        NITHIN <span className="text-cyan-400">RAJ</span>
+                      </span>
+                      <p className="text-[11px] text-slate-500 font-mono">
+                        Computer Science Student & Developer
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-xs text-slate-400 font-mono text-center">
+                    © {new Date().getFullYear()} Nithin Raj. Built with code, data and creativity.
+                  </div>
+
+                  <button
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="p-3 rounded-xl glass-panel border border-slate-800 text-slate-400 hover:text-white flex items-center gap-2 text-xs font-mono"
+                  >
+                    <span>Back to top</span>
+                    <Icon name="arrow-up" className="w-4 h-4 text-cyan-400" />
+                  </button>
+                </div>
+              </div>
+            </footer>
+
+          </div>
+        );
+      };
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>
