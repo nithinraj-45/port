@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <!-- Logo -->
+          {/* Logo */}
           <a
             href="#"
             className="group flex items-center gap-3 text-slate-100 font-bold text-xl tracking-tight transition-transform hover:scale-105"
@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             </div>
           </a>
 
-          <!-- Desktop Navigation -->
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1 glass-panel px-4 py-1.5 rounded-full border border-slate-800/80">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             })}
           </nav>
 
-          <!-- Desktop Actions -->
+          {/* Desktop Actions */}
           <div className="hidden sm:flex items-center gap-3">
             <a
               href="/Nithin_Raj_Resume.pdf"
@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             </a>
           </div>
 
-          <!-- Mobile Hamburger Toggle -->
+          {/* Mobile Hamburger Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white"
@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         </div>
       </div>
 
-      <!-- Mobile Dropdown Menu -->
+      {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-x-4 top-20 z-50 glass-panel p-6 rounded-2xl border border-slate-800 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-300">
           <div className="flex flex-col gap-3">

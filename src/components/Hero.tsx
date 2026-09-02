@@ -4,17 +4,17 @@ import { ArrowRight, Download, Mail, MapPin, Sparkles, Code, Database, Palette, 
 export const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
-      <!-- Ambient Background Elements -->
+      {/* Ambient Background Elements */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/15 via-violet-600/15 to-purple-600/10 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-cyan-600/10 rounded-full blur-[90px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          <!-- Left Column: Introduction & Details -->
+          {/* Left Column: Introduction & Details */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-6 text-left">
             
-            <!-- Status Badge -->
+            {/* Status Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-cyan-300 text-xs font-semibold tracking-wide shadow-glow-cyan">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
               </span>
             </div>
 
-            <!-- Main Heading -->
+            {/* Main Heading */}
             <div className="space-y-2">
               <div className="text-sm font-mono text-cyan-400 tracking-wider uppercase font-semibold flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-cyan-400" />
@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
               </p>
             </div>
 
-            <!-- Short Tagline & Summary -->
+            {/* Short Tagline & Summary */}
             <p className="text-slate-300 text-lg sm:text-xl font-medium max-w-2xl leading-relaxed">
               "Building with code, data and creativity."
             </p>
@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
               Sophomore pursuing B.E. Computer Science and Engineering at Loyola-ICAM College of Engineering & Technology (LICET). Crafting clean software solutions and exploring data insights.
             </p>
 
-            <!-- Action Buttons -->
+            {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-4 w-full sm:w-auto">
               <a
                 href="#projects"
@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
-            <!-- Mini Tech Pill Grid -->
+            {/* Mini Tech Pill Grid */}
             <div className="pt-6 border-t border-slate-800/80 w-full flex items-center gap-6 text-xs text-slate-400 font-mono">
               <div className="flex items-center gap-1.5 text-slate-300">
                 <Code className="w-4 h-4 text-cyan-400" /> Python / C / Java
@@ -93,14 +93,14 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          <!-- Right Column: Floating 3D Levitating Profile Card -->
+          {/* Right Column: Floating 3D Levitating Profile Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative group w-full max-w-md">
               
-              <!-- Ambient Glow Frame Behind Card -->
+              {/* Ambient Glow Frame Behind Card */}
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700 group-hover:duration-200 animate-pulse-glow" />
               
-              <!-- Levitating Glass Card -->
+              {/* Levitating Glass Card */}
               <div className="relative levitate-frame glass-panel p-4 sm:p-6 rounded-3xl border border-white/10 shadow-2xl flex flex-col items-center">
                 
                 {/* Profile Image Holder with Cyber Overlay */}
@@ -111,7 +111,7 @@ export const Hero: React.FC = () => {
                     onError={(e: any) => { e.target.onerror = null; e.target.src = '/nithin-raj-photo.png'; }}
                     className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <!-- Cyber Scanline Effect Overlay -->
+                  {/* Cyber Scanline Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent opacity-60" />
                   
                   <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-[#0B0F19]/85 backdrop-blur-md border border-cyan-500/30 flex items-center justify-between shadow-lg">
@@ -128,7 +128,7 @@ export const Hero: React.FC = () => {
                   </div>
                 </div>
 
-                <!-- Levitating Badges -->
+                {/* Levitating Badges */}
                 <div className="w-full grid grid-cols-2 gap-3 mt-4">
                   <div className="glass-panel px-3 py-2 rounded-xl text-center border border-cyan-500/20">
                     <span className="text-[10px] text-slate-400 uppercase font-mono block">Specialization</span>

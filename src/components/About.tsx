@@ -27,12 +27,12 @@ export const About: React.FC = () => {
 
   return (
     <section id="about" className="py-24 relative overflow-hidden">
-      <!-- Grid pattern background -->
+      {/* Grid pattern background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header -->
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
             <UserCheck className="w-3.5 h-3.5" />
@@ -46,10 +46,10 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        <!-- Main Content Layout -->
+        {/* Main Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          <!-- Personal Summary Card -->
+          {/* Personal Summary Card */}
           <div className="lg:col-span-5 glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6 relative group hover:border-cyan-500/30 transition-all">
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold">
@@ -64,7 +64,7 @@ export const About: React.FC = () => {
               </p>
             </div>
 
-            <!-- Verified Resume Highlight Badge -->
+            {/* Verified Resume Highlight Badge */}
             <div className="pt-4 border-t border-slate-800">
               <div className="glass-panel p-4 rounded-2xl border border-sky-500/30 bg-gradient-to-r from-cyan-950/40 to-slate-900/60 flex items-center gap-3">
                 <div className="p-2.5 rounded-xl bg-sky-500/20 text-sky-400 border border-sky-500/40">
@@ -78,7 +78,7 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          <!-- Interest Highlights Grid -->
+          {/* Interest Highlights Grid */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {highlights.map((item, idx) => (
               <div

@@ -72,12 +72,12 @@ export const BeyondCode: React.FC = () => {
 
   return (
     <section id="beyond-code" className="py-24 relative overflow-hidden bg-gradient-to-b from-[#080B11] via-slate-950 to-[#080B11]">
-      <!-- Creative Background Glow -->
+      {/* Creative Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-cyan-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header -->
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel border border-purple-500/30 text-purple-400 text-xs font-mono font-semibold tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5" />
@@ -91,10 +91,10 @@ export const BeyondCode: React.FC = () => {
           </p>
         </div>
 
-        <!-- Creative Showcase Layout -->
+        {/* Creative Showcase Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          <!-- Left: Selection Pills -->
+          {/* Left: Selection Pills */}
           <div className="lg:col-span-5 flex flex-col gap-3">
             {creativeWork.map((item) => {
               const isSelected = activeItem === item.id;
@@ -123,7 +123,7 @@ export const BeyondCode: React.FC = () => {
             })}
           </div>
 
-          <!-- Right: Interactive Display Card -->
+          {/* Right: Interactive Display Card */}
           <div className="lg:col-span-7">
             <div className={`h-full glass-panel p-8 sm:p-10 rounded-3xl border border-slate-800 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br ${currentItem.gradient}`}>
               
@@ -146,7 +146,7 @@ export const BeyondCode: React.FC = () => {
                   </p>
                 </div>
 
-                <!-- Highlight Key Details -->
+                {/* Highlight Key Details */}
                 <div className="pt-6 border-t border-slate-800/80 space-y-3">
                   <h4 className="text-xs font-bold font-mono text-slate-400 uppercase tracking-wider">
                     Core Focus & Technique:
@@ -165,7 +165,7 @@ export const BeyondCode: React.FC = () => {
                 </div>
               </div>
 
-              <!-- Extra Note Footer -->
+              {/* Extra Note Footer */}
               <div className="mt-8 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-mono text-slate-400">
                 <span>Resume Verified Extra-Curricular</span>
                 <span className="text-slate-300">Creative Technologist</span>

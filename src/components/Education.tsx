@@ -6,7 +6,7 @@ export const Education: React.FC = () => {
     <section id="education" className="py-24 relative overflow-hidden bg-slate-950/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header -->
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
             <GraduationCap className="w-3.5 h-3.5" />
@@ -20,10 +20,10 @@ export const Education: React.FC = () => {
           </p>
         </div>
 
-        <!-- Education Timeline Layout -->
+        {/* Education Timeline Layout */}
         <div className="max-w-4xl mx-auto space-y-8">
           
-          <!-- Institution 1: LICET -->
+          {/* Institution 1: LICET */}
           <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover relative overflow-hidden group">
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
               <div className="flex items-start gap-4">
@@ -66,7 +66,7 @@ export const Education: React.FC = () => {
             </div>
           </div>
 
-          <!-- Institution 2: Madras Christian College School -->
+          {/* Institution 2: Madras Christian College School */}
           <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover relative overflow-hidden group">
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
               <div className="flex items-start gap-4">

@@ -38,10 +38,10 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#080B11] text-slate-100 relative bg-mesh">
-      <!-- Navbar -->
+      {/* Navbar */}
       <Navbar activeSection={activeSection} />
 
-      <!-- Main Content Sections -->
+      {/* Main Content Sections */}
       <main>
         <Hero />
         <About />
@@ -53,7 +53,7 @@ export const App: React.FC = () => {
         <Contact />
       </main>
 
-      <!-- Footer -->
+      {/* Footer */}
       <Footer />
     </div>
   );

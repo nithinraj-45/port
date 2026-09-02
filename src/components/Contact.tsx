@@ -29,12 +29,12 @@ export const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-slate-950/60">
-      <!-- Background Glow Elements -->
+      {/* Background Glow Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-tr from-cyan-600/15 via-violet-600/15 to-purple-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section CTA Title -->
+        {/* Section CTA Title */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold tracking-wider uppercase shadow-glow-cyan">
             <Sparkles className="w-3.5 h-3.5" />
@@ -50,10 +50,10 @@ export const Contact: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
           
-          <!-- Contact Direct Details Card -->
+          {/* Contact Direct Details Card */}
           <div className="lg:col-span-5 space-y-4">
             
-            <!-- Email Box -->
+            {/* Email Box */}
             <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-center justify-between glass-panel-hover group">
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
@@ -75,7 +75,7 @@ export const Contact: React.FC = () => {
               </button>
             </div>
 
-            <!-- Phone Box -->
+            {/* Phone Box */}
             <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-center justify-between glass-panel-hover group">
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/30 text-violet-400">
@@ -97,7 +97,7 @@ export const Contact: React.FC = () => {
               </button>
             </div>
 
-            <!-- Location Box -->
+            {/* Location Box */}
             <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-center justify-between glass-panel-hover">
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
@@ -112,7 +112,7 @@ export const Contact: React.FC = () => {
               </div>
             </div>
 
-            <!-- Quick Action Resume Button -->
+            {/* Quick Action Resume Button */}
             <a
               href="/Nithin_Raj_Resume.pdf"
               download="Nithin_Raj_Resume.pdf"
@@ -124,7 +124,7 @@ export const Contact: React.FC = () => {
 
           </div>
 
-          <!-- Interactive Quick Message Form -->
+          {/* Interactive Quick Message Form */}
           <div className="lg:col-span-7 glass-panel p-8 rounded-3xl border border-slate-800">
             {formSubmitted ? (
               <div className="py-12 text-center space-y-4">

@@ -6,7 +6,7 @@ export const Experience: React.FC = () => {
     <section id="experience" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header -->
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
             <Briefcase className="w-3.5 h-3.5" />
@@ -20,10 +20,10 @@ export const Experience: React.FC = () => {
           </p>
         </div>
 
-        <!-- Experience Timeline Cards -->
+        {/* Experience Timeline Cards */}
         <div className="max-w-4xl mx-auto space-y-8">
           
-          <!-- Card 1: Aspiring IT Intern -->
+          {/* Card 1: Aspiring IT Intern */}
           <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover relative overflow-hidden group">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
               <div>
@@ -50,7 +50,7 @@ export const Experience: React.FC = () => {
             </div>
           </div>
 
-          <!-- Card 2: Student Developer - ClassConnect -->
+          {/* Card 2: Student Developer - ClassConnect */}
           <div className="glass-panel p-8 rounded-3xl border border-slate-800 glass-panel-hover relative overflow-hidden group">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
               <div>

@@ -4,12 +4,12 @@ import { FolderGit2, ExternalLink, Code2, Users, Bug, Layers, Sparkles, Edit3, B
 export const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
-      <!-- Background Ambient Glow -->
+      {/* Background Ambient Glow */}
       <div className="absolute top-1/3 right-10 w-96 h-96 bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header -->
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
             <FolderGit2 className="w-3.5 h-3.5" />
@@ -23,15 +23,15 @@ export const Projects: React.FC = () => {
           </p>
         </div>
 
-        <!-- Projects Grid -->
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
-          <!-- Project 1: ClassConnect -->
+          {/* Project 1: ClassConnect */}
           <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between glass-panel-hover group relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-bl-full blur-2xl pointer-events-none" />
             
             <div>
-              <!-- Top Badges -->
+              {/* Top Badges */}
               <div className="flex items-center justify-between mb-6">
                 <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
                   LICET | 2024
@@ -41,7 +41,7 @@ export const Projects: React.FC = () => {
                 </span>
               </div>
 
-              <!-- Title & Subtitle -->
+              {/* Title & Subtitle */}
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-['Outfit'] group-hover:text-cyan-300 transition-colors">
                 ClassConnect
               </h3>
@@ -49,7 +49,7 @@ export const Projects: React.FC = () => {
                 A specialized Java application designed to seamlessly connect students and teachers through an intuitive graphical user interface.
               </p>
 
-              <!-- Tech Stack Badges -->
+              {/* Tech Stack Badges */}
               <div className="flex flex-wrap gap-2 my-6">
                 {['Java', 'OOP', 'Swing', 'GUI Architecture'].map((tech) => (
                   <span
@@ -61,7 +61,7 @@ export const Projects: React.FC = () => {
                 ))}
               </div>
 
-              <!-- Key Learning Outcome Pills -->
+              {/* Key Learning Outcome Pills */}
               <div className="space-y-3 pt-4 border-t border-slate-800">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">
                   Core Skills Developed & Applied:
@@ -83,7 +83,7 @@ export const Projects: React.FC = () => {
               </div>
             </div>
 
-            <!-- Footer Link -->
+            {/* Footer Link */}
             <div className="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
               <span>Role: Student Developer</span>
               <span className="text-cyan-400 flex items-center gap-1 font-semibold">
@@ -92,12 +92,12 @@ export const Projects: React.FC = () => {
             </div>
           </div>
 
-          <!-- Project 2: Social Media Analytics & Insights (Editable Resume Showcase) -->
+          {/* Project 2: Social Media Analytics & Insights (Editable Resume Showcase) */}
           <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between glass-panel-hover group relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/10 rounded-bl-full blur-2xl pointer-events-none" />
             
             <div>
-              <!-- Top Badges -->
+              {/* Top Badges */}
               <div className="flex items-center justify-between mb-6">
                 <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-violet-500/10 text-violet-400 border border-violet-500/30">
                   Data & Marketing Initiative
@@ -107,7 +107,7 @@ export const Projects: React.FC = () => {
                 </span>
               </div>
 
-              <!-- Title & Subtitle -->
+              {/* Title & Subtitle */}
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-['Outfit'] group-hover:text-violet-300 transition-colors">
                 Social Media Analytics & Insights
               </h3>
@@ -115,7 +115,7 @@ export const Projects: React.FC = () => {
                 Leveraging data analysis techniques to measure social media engagement, audience reach, and promotion performance metrics.
               </p>
 
-              <!-- Tech Stack Badges -->
+              {/* Tech Stack Badges */}
               <div className="flex flex-wrap gap-2 my-6">
                 {['Data Analysis', 'Social Media Analytics', 'Audience Insights', 'Marketing Strategy'].map((tech) => (
                   <span
@@ -127,7 +127,7 @@ export const Projects: React.FC = () => {
                 ))}
               </div>
 
-              <!-- Editable Placeholder Banner for User Customization -->
+              {/* Editable Placeholder Banner for User Customization */}
               <div className="p-4 rounded-2xl bg-violet-950/30 border border-dashed border-violet-500/40 text-slate-300 text-xs space-y-2">
                 <div className="flex items-center gap-2 text-violet-300 font-bold font-mono">
                   <Edit3 className="w-4 h-4" />
@@ -139,7 +139,7 @@ export const Projects: React.FC = () => {
               </div>
             </div>
 
-            <!-- Footer Link -->
+            {/* Footer Link */}
             <div className="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
               <span>Focus: Data Explorer & Strategist</span>
               <span className="text-violet-400 flex items-center gap-1 font-semibold">

@@ -47,7 +47,7 @@ export const Skills: React.FC = () => {
     <section id="skills" className="py-24 relative overflow-hidden bg-slate-950/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header -->
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5" />
@@ -61,7 +61,7 @@ export const Skills: React.FC = () => {
           </p>
         </div>
 
-        <!-- Filter Tabs -->
+        {/* Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {categories.map((cat) => (
             <button
@@ -78,7 +78,7 @@ export const Skills: React.FC = () => {
           ))}
         </div>
 
-        <!-- Skills Grid -->
+        {/* Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSkills.map((skill, idx) => (
             <div
