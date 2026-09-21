@@ -1,6 +1,6 @@
 # Nithin Raj - Personal Portfolio Website
 
-![Nithin Raj Portfolio]
+[Nithin Raj Portfolio]
 
 A dark futuristic, recruiter-ready personal portfolio website for **Nithin Raj**, Computer Science Engineering student at Loyola-ICAM College of Engineering & Technology (LICET), Chennai.
 
